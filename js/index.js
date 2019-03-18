@@ -65,7 +65,7 @@
 
   // load after all srcs loaded
   const windowSrcs = [
-    '/js/leancloud.js',
+    // '/js/leancloud.js',
     '/js/share.js',
     '/js/reward.js',
     '/js/mathjax.js'
