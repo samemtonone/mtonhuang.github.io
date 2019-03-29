@@ -3,7 +3,7 @@
   
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
-  <meta name="author" content="mtonhuang">
+  <meta name="author">
   
   
   <title>h5拖拽 | mton的小站</title>
@@ -19,10 +19,12 @@
 
   
 
-  <!-- <script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.11.1/dist/av-min.js" async></script> -->
+  
 
   
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async></script>
+  
+
   
 
   
@@ -32,23 +34,23 @@
   // it can be used in every script
   
   window.AD_CONFIG = {
-    // leancloud: {"appid":"i-wz9at2a1qhfmkho4h3qu","appkey":"xxx","comment":false,"count":false},
+    leancloud: {"appid":"i-wz9at2a1qhfmkho4h3qu","appkey":"xxx","comment":false,"count":false},
     welcome: {"enable":false,"interval":30},
-    // start_time: "2019-03-01",
-    passwords: [],
+    start_time: "2019-03-01",
+    passwords: ["efe07af7441da2b69c4a41e42e73be4db47f66010a56900788a458354a7373ec", ],
     is_post: true,
     lock: false,
     author: "mtonhuang",
     share: {"twitter":true,"facebook":true,"weibo":true,"qq":true,"wechat":true},
     mathjax: true,
-    page_type: ""
+    page_type: "",
+    root: "/"
   };
 </script>
 
-  <!-- <script src="/vendor/sha256.min.js"></script>
-<script src="/js/auth.js"></script>
+  <script src="/vendor/sha256.min.js"></script>
 <script src="/js/index.js"></script>
-<script src="/vendor/qrcode.min.js"></script> -->
+<script src="/vendor/qrcode.min.js"></script>
 
   
     <link rel="icon" href="/images/favicon.ico">
@@ -91,7 +93,7 @@
     <div class="site-header-btn">
       
         <a href="https://github.com/mtonhuang" target="_blank" id="site-github">
-          <i class="fa fa-github-alt"></i>
+          <i class="fa fa-github"></i>
         </a>
       
       <a href="javascript:void(0);" id="site-search">
@@ -170,7 +172,6 @@
 <p>另外h5_drapp文件夹里附带了JQ版本实现的效果，可以看看。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//Apply some basic styles </span></span><br><span class="line">    <span class="keyword">var</span> css = <span class="string">".draggable&#123;cursor: move;display: inline-block;&#125; .text&#123;display: inline-block; cursor: move;&#125; .text:focus&#123;cursor: auto;&#125; .text-wrapper&#123;width: 100%;position: relative;&#125; .wrap&#123;position: absolute;margin: auto;top: 0;bottom: 0;left: 0;right: 0;&#125;';"</span>;</span><br><span class="line">    <span class="keyword">var</span> style = <span class="built_in">document</span>.createElement(<span class="string">'style'</span>);</span><br><span class="line">    <span class="keyword">if</span> (style.styleSheet) &#123;</span><br><span class="line">        style.styleSheet.cssText = css;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        style.appendChild(<span class="built_in">document</span>.createTextNode(css));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">document</span>.getElementsByTagName(<span class="string">'head'</span>)[<span class="number">0</span>].appendChild(style);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Select all elements with the 'draggable' class and stores them in the 'elements' variable</span></span><br><span class="line">    <span class="keyword">var</span> elements = <span class="built_in">document</span>.querySelectorAll(<span class="string">".draggable"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Variable to store z index of last moved element</span></span><br><span class="line">    z = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Stores the last edited element</span></span><br><span class="line">    <span class="keyword">var</span> tgt;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> clickTimer = <span class="literal">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Adds event listeners to every element that has the draggable class</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; elements.length; i++)&#123;</span><br><span class="line">      elements[i].addEventListener(<span class="string">'mousedown'</span>, drag);</span><br><span class="line">        elements[i].addEventListener(<span class="string">'touchstart'</span>, handleTouch);</span><br><span class="line">        b = elements[i].getBoundingClientRect();</span><br><span class="line">        <span class="comment">// Calculate the initial offset of the element from the top left of the page and stores it as a property of the element</span></span><br><span class="line">        elements[i].initialOffsetX = b.left + <span class="built_in">window</span>.scrollX;</span><br><span class="line">        elements[i].initialOffsetY = b.top + <span class="built_in">window</span>.scrollY;</span><br><span class="line">        elements[i].x = b.left;</span><br><span class="line">        elements[i].y = b.top;</span><br><span class="line">        elements[i].style.cursor = <span class="string">"move"</span>;</span><br><span class="line">      <span class="built_in">document</span>.addEventListener(<span class="string">'mouseup'</span>, end);</span><br><span class="line">        <span class="built_in">document</span>.addEventListener(<span class="string">'touchend'</span>, end);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">handleTouch</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line">        evt.preventDefault();</span><br><span class="line">        drag(evt);</span><br><span class="line">        <span class="keyword">if</span> (clickTimer == <span class="literal">null</span>) &#123;</span><br><span class="line">            clickTimer = setTimeout(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">                clickTimer = <span class="literal">null</span>;</span><br><span class="line">            &#125;, <span class="number">500</span>)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            clearTimeout(clickTimer);</span><br><span class="line">            clickTimer = <span class="literal">null</span>;</span><br><span class="line">            editText(evt);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Main logic, called when the mouse is clicked</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">drag</span>(<span class="params">event</span>) </span>&#123;</span><br><span class="line">          <span class="comment">// Prevent default behavior and increase z index to bring the new element to the front</span></span><br><span class="line">          event.preventDefault();</span><br><span class="line">          moving = <span class="literal">true</span>;</span><br><span class="line">          z = z+<span class="number">1</span>; </span><br><span class="line"></span><br><span class="line">          <span class="comment">// Identify which element was clicked and store in the 'tgt' element, then get position properties of it</span></span><br><span class="line">          tgt = event.target;</span><br><span class="line">          b = tgt.getBoundingClientRect();</span><br><span class="line">          <span class="keyword">var</span> x = b.left + <span class="built_in">window</span>.scrollX;</span><br><span class="line">          <span class="keyword">var</span> y = b.top + <span class="built_in">window</span>.scrollY;</span><br><span class="line">          offsetX = event.pageX || event.changedTouches[<span class="number">0</span>].pageX;</span><br><span class="line">          offsetY = event.pageY || event.changedTouches[<span class="number">0</span>].pageY;</span><br><span class="line"></span><br><span class="line">          <span class="built_in">document</span>.addEventListener(<span class="string">'mousemove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">            <span class="comment">// If the page has been clicked and an element is being dragged</span></span><br><span class="line">            <span class="keyword">if</span>(moving === <span class="literal">true</span>)&#123;</span><br><span class="line">              <span class="comment">// Calculate the new position of the element, relative to the top left of the page</span></span><br><span class="line">              <span class="keyword">var</span> dx = e.pageX - offsetX + x - tgt.initialOffsetX;</span><br><span class="line">              <span class="keyword">var</span> dy = e.pageY - offsetY + y - tgt.initialOffsetY;</span><br><span class="line">              <span class="comment">// Apply the styles to the element</span></span><br><span class="line">              <span class="keyword">var</span> position = <span class="string">'transform: translate('</span>+dx+<span class="string">'px, '</span>+dy+<span class="string">'px);z-index:'</span>+z+<span class="string">';'</span>;</span><br><span class="line">              tgt.setAttribute(<span class="string">'style'</span>, position);</span><br><span class="line">            &#125;;  </span><br><span class="line">          &#125;);</span><br><span class="line">          <span class="built_in">document</span>.addEventListener(<span class="string">'touchmove'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">              <span class="keyword">var</span> touches = e.changedTouches;</span><br><span class="line">            <span class="comment">// If the page has been clicked and an element is being dragged</span></span><br><span class="line">            <span class="keyword">if</span>(moving === <span class="literal">true</span>)&#123;</span><br><span class="line">              <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; touches.length; i++)&#123;</span><br><span class="line">                  <span class="comment">// Calculate the new position of the element, relative to the top left of the page</span></span><br><span class="line">                  <span class="keyword">var</span> dx = touches[i].pageX - offsetX + x - tgt.initialOffsetX;</span><br><span class="line">                  <span class="keyword">var</span> dy = touches[i].pageY - offsetY + y - tgt.initialOffsetY;</span><br><span class="line">                  <span class="comment">// Apply the styles to the element</span></span><br><span class="line">                  <span class="keyword">var</span> position = <span class="string">'transform: translate('</span>+dx+<span class="string">'px, '</span>+dy+<span class="string">'px);z-index:'</span>+z+<span class="string">';'</span>;</span><br><span class="line">                  tgt.setAttribute(<span class="string">'style'</span>, position);</span><br><span class="line">              &#125;</span><br><span class="line">            &#125;;  </span><br><span class="line">          &#125;);</span><br><span class="line">      </span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">end</span>(<span class="params">evt</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// When the mouse is lifted up, set moving to false</span></span><br><span class="line">      moving = <span class="literal">false</span>;</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">outerHeight</span>(<span class="params">el</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> height = el.offsetHeight;</span><br><span class="line">      <span class="keyword">var</span> style = getComputedStyle(el);</span><br><span class="line"></span><br><span class="line">      height += <span class="built_in">parseInt</span>(style.marginTop) + <span class="built_in">parseInt</span>(style.marginBottom);</span><br><span class="line">      <span class="keyword">return</span> height;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>代码参考链接：<a href="https://github.com/chrisnunes57/Draggin.js" target="_blank" rel="noopener">Draggin</a></p>
-
   </article>
   <aside class="table-content" id="site-toc">
   <div class="table-content-title">
@@ -207,7 +208,7 @@
 </div>
 
     </main>
-    <!-- 
+    
     <div class="site-footer-wrapper">
   <footer class="site-footer">
     
@@ -249,7 +250,7 @@
     <div class="site-footer-info">
       <i class="fa fa-clock-o"></i> 本站已稳定运行<span id="site-time"></span>
     </div>
-    <!--  -->
+    
     
       <div class="site-footer-info">
         <i class="fa fa-at"></i> Email: huangmiantong@126.com
@@ -257,8 +258,7 @@
     
     <div class="site-footer-info">
       <i class="fa fa-copyright"></i> 
-      2019
-      Created by <a href="https:/huangmiantong.cn/" target="_blank">mtonhuang</a>.
+      2019 Blog Created by <a href="https://github.com/mtonhuang/mtonhuang.github.io" target="_blank">mtonhuang</a>.
       All rights reserved.
     </div>
   </footer>
@@ -299,24 +299,24 @@
 
 <div class="bottom-bar">
   <div class="bottom-bar-left">
-    <a href="javascript:void(0);" data-enable="false">
+    <!-- <a href="javascript:void(0);" data-enable="false">
       <i class="fa fa-arrow-left"></i>
     </a>
     <a href="/passages/react基础理论图/" data-enable="true">
       <i class="fa fa-arrow-right"></i>
-    </a>
+    </a> -->
   </div>
   <div class="bottom-bar-right">
     <a href="javascript:void(0);" data-enable="true" id="site-toc-show-btn">
       <i class="fa fa-bars"></i>
     </a>
-    <!-- 
+    
     <a href="javascript:void(0);" id="site-toggle-share-btn">
       <i class="fa fa-share-alt"></i>
     </a>
-    <!-- <a href="javascript:void(0);" id="site-reward">
-      <i class="fa fa-thumbs-up"></i>
-    </a> -->
+    <a href="javascript:void(0);" id="site-reward">
+      <i class="fa fa-gratipay"></i>
+    </a>
     <a href="javascript:void(0);" id="back-top-btn">
       <i class="fa fa-chevron-up"></i>
     </a>
